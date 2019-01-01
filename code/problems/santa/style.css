@@ -1,0 +1,44 @@
+body, input, button {
+    font-size: 3vw !important;
+    font-family: 'Dosis', sans-serif !important;
+    color: #cbd2df !important;
+    margin: 2vw;
+    overflow: hidden;
+}
+
+input {
+    background-color: #484c54;
+    border: none;
+}
+
+#challenge {
+    bottom: 2vh;
+    right: 2vh;
+    position: absolute;
+}
+
+.deer {
+    width: 9vw;
+}
+
+button {
+    background-color: green !important;
+    border: none;
+    border-radius: 5px;
+}
+
+#turnoff {
+    width: 10vh;
+    left: 1vh;
+    bottom: 1vh;
+    position: absolute;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
