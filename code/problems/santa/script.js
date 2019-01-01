@@ -1,8 +1,9 @@
 APIF.start();
 
 let audio = new Audio("..\\..\\..\\sound\\challenge.mp3");
-audio.volume = 0.5;
+audio.volume = 0.25;
 audio.play();
+document.getElementById("input").focus();
 
 let deer;
 let deer_lost;
@@ -43,6 +44,8 @@ function check(){
             init();
             i++;
             document.getElementById("challenge").innerHTML = (i + 1) + " / 5";
+            document.getElementById("input").value = "";
+            document.getElementById("input").focus();
             APIF.start();
             setTimeout(() => {
                 document.getElementById("blackhole").style.backgroundColor = "black";
