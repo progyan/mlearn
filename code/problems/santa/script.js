@@ -13,6 +13,7 @@ function init(){
     deer = Math.ceil(Math.random() * 9);
     deer_lost = Math.ceil(Math.random() * (10 - deer));
     const DEER_TAG = "<img src=\"../../../img/deer.png\" class=\"deer\">";
+    const DEER_LOST_TAG = "<img src=\"../../../img/lost_deer.png\" class=\"deer\">";
     document.getElementById("text").innerHTML = 
         "Santa has " + deer + " deer. " + 
         deer_lost + " deer were lost. How many deer Santa had until " +
@@ -22,6 +23,9 @@ function init(){
 
     for(let i = 0; i < deer; i++){
         document.getElementById("container").innerHTML += DEER_TAG;
+    }
+    for(let i = 0; i < deer_lost; i++){
+        document.getElementById("container").innerHTML += DEER_LOST_TAG;
     }
 
     let a, b, c;
