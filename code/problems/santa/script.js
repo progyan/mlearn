@@ -1,6 +1,6 @@
 APIF.start();
 
-let audio = new Audio("..\\..\\..\\sound\\challenge.mp3");
+let audio = new Audio("../../../sound/challenge.mp3");
 audio.volume = 0.25;
 audio.play();
 
@@ -12,7 +12,7 @@ let i = 0;
 function init(){
     deer = Math.ceil(Math.random() * 9);
     deer_lost = Math.ceil(Math.random() * (10 - deer));
-    const DEER_TAG = "<img src=\"..\\..\\..\\img\\deer.png\" class=\"deer\">";
+    const DEER_TAG = "<img src=\"../../../img/deer.png\" class=\"deer\">";
     document.getElementById("text").innerHTML = 
         "Santa has " + deer + " deer. " + 
         deer_lost + " deer were lost. How many deer Santa had until " +
@@ -66,7 +66,7 @@ init();
 
 function close_window(){
     APIF.stop();
-    setTimeout(() => {APIF.goto("..\\..\\menu\\index.html")}, 1000);
+    setTimeout(() => {APIF.goto("../../menu/index.html")}, 1000);
 }
 
 function check(){
@@ -107,10 +107,10 @@ function check(){
 }
 
 function hohoho(){
-    let santaclaus = new Audio("..\\..\\..\\sound\\santaclaus.mp3");
+    let santaclaus = new Audio("../../../sound/santaclaus.mp3");
     santaclaus.play();
     setTimeout(APIF.stop, 3000);
-    setTimeout(() => {APIF.goto('..\\..\\menu\\index.html')}, 4000);
+    setTimeout(() => {APIF.goto('../../menu/index.html')}, 4000);
 }
 
 function bold(el){

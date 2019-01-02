@@ -1,15 +1,15 @@
 const NAMES = ['santa'];
-const HREFS = ['..\\problems\\santa\\index.html'];
+const HREFS = ['../problems/santa/index.html'];
 
 APIF.start();
 
-let sound = new Audio("..\\..\\sound\\menu.mp3");
+let sound = new Audio("../../sound/menu.mp3");
 sound.play();
 
 function close_window() {
     window.close();
     APIF.stop();
-    setTimeout(() => {APIF.goto("..\\bye\\index.html")}, 1000);
+    setTimeout(() => {APIF.goto("../bye/index.html")}, 1000);
 }
 
 function challenge(str){

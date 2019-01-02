@@ -6,5 +6,5 @@ APIF.start();
 
 setTimeout(() => {
     APIF.stop();
-    document.body.onclick = () => {APIF.goto("..\\logo\\index.html")};
+    document.body.onclick = () => {APIF.goto("../logo/index.html")};
 }, 3000);
