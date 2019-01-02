@@ -89,7 +89,7 @@ function check(){
                 document.getElementById("blackhole").style.backgroundColor = "black";
             }, 700);
         }, 700);
-    } else if(i > 3){
+    } else if(i > 3 && nValue == deer + deer_lost){
         hohoho();
     } else {
         document.getElementById("blackhole").style.backgroundColor = "#ff5500";
