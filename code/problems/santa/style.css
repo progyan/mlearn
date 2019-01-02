@@ -21,6 +21,16 @@ input {
     width: 9vw;
 }
 
+.answer {
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+
+#selected {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
 button {
     background-color: green !important;
     border: none;
