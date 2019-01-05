@@ -10,20 +10,10 @@ let level = 1;
 
 let i = 0;
 
-function init(){
-    deer = Math.ceil(Math.random() * 9);
-    deer_lost = Math.ceil(Math.random() * (10 - deer));
-    const DEER_TAG = "<img src=\"../../../img/deer.png\" class=\"deer\">";
-    document.getElementById("text").innerHTML = 
-        "Santa has " + deer + " deer. " + 
-        deer_lost + " deer were lost. How many deer Santa had until " +
-        deer_lost + " was lost?";
-
+function adaptLevel(){
     document.getElementById("container").innerHTML = "";
 
-    for(let i = 0; i < deer; i++){
-        document.getElementById("container").innerHTML += DEER_TAG;
-    }
+    const DEER_TAG = "<img src=\"../../../img/deer.png\" class=\"deer\">";
 
     function lost(){
         const DEER_LOST_TAG = "<img src=\"../../../img/lost_deer.png\" class=\"deer\">";
@@ -32,11 +22,24 @@ function init(){
         }
     }
 
-    if(level == 1){
+    for(let i = 0; i < deer; i++){
+        document.getElementById("container").innerHTML += DEER_TAG;
+    }
 
-    }else if(level == 2){
+    if(level == 1){
         lost();
     }
+}
+
+function init(){
+    deer = Math.ceil(Math.random() * 9);
+    deer_lost = Math.ceil(Math.random() * (10 - deer));
+    document.getElementById("text").innerHTML = 
+        "Santa has " + deer + " deer. " + 
+        deer_lost + " deer were lost. How many deer Santa had until " +
+        deer_lost + " was lost?";
+
+    adaptLevel();
 
     let a, b, c;
 
@@ -130,4 +133,19 @@ function hohoho(){
 function bold(el){
     document.getElementById("selected").id = "";
     el.id = "selected";
+}
+
+function changeLevel(el){
+    APIF.stop();
+    setTimeout(() => {
+        if(level == 1){
+            level = 2;
+            el.src = "../../../img/deer.png";
+        } else {
+            level = 1;
+            el.src = "../../../img/lost_deer.png";
+        }
+        adaptLevel();
+        APIF.start();
+    }, 700);
 }

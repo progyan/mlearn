@@ -37,11 +37,18 @@ button {
     border-radius: 5px;
 }
 
-#turnoff {
+.turnoff {
     width: 10vh;
     left: 1vh;
     bottom: 1vh;
     position: absolute;
+}
+
+#level {
+    position: absolute;
+    bottom: 1vh;
+    left: 12vh;
+    height: 10vh;
 }
 
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
